@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head> 
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ALWAYS like a moon as I</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        text-align: center;
+        background-color: mediumturquoise;
+        flex-direction: column;
+      }
+
+      .container {
+        position: relative;
+        width: 500px;
+        height: 415px;
+        background: url("WhatsApp Image 2025-02-15 at 15.51.12_8c02de89.jpg") no-repeat center center;
+        background-size: contain; /* Ensure the image fits within the container */
+        overflow: hidden;
+      }
+
+      /* Fully opaque black overlay covering the image */
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: lightblue; /* Fully black, no translucency */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 22px;
+        font-weight: bold;
+        color: rgb(7, 0, 0);
+        transition: transform 1s ease-in-out, opacity 0.5s ease-in-out;
+      }
+
+      /* "Point Here" text transition */
+      .text {
+        transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+      }
+
+      /* Hover effect - Overlay collapses from all sides into the center */
+      .container:hover .overlay {
+        transform: scale(0); /* Shrinks from all sides into the center */
+      }
+ 
+      .container:hover .text {
+        transform: scale(0); /* Text shrinks into the center */
+        opacity: 0; /* Disappears smoothly */
+      }
+      .next-button {
+        margin-top: 20px;
+        padding: 10px 20px;
+        font-size: 16px;
+        font-weight: bold;
+        color: #fff;
+        background-color: #4158d0;
+        border: 1px solid #090909;
+        border-radius: 5px;
+        cursor: pointer;
+        text-align: center;
+        transition: background-color 0.3s;
+      }
+      .next-button:hover {
+        background-color: #c850c0;
+      }
+
+      .wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="container">
+        <div class="overlay">
+          <div class="text">Touch Here</div>
+        </div>
+      </div>
+      <button class="next-button" onclick="location.href='index4.html'">
+        Next
+      </button>
+    </div>
+  </body>
+</html>
